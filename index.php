@@ -1,3 +1,6 @@
+<?php 
+$error = (isset($_GET['error'])) ? $_GET['error'] : '' ;
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -12,6 +15,13 @@
 	
 	<h1>Page de connexion</h1>
 	<br><br>
+	
+	<?php 
+	
+	if($error !=''){
+	    echo "error passwd !";
+	}
+	?>
 	
 	<form class="form-horizontal" method="post" action="connexion.php">
   <div class="form-group">

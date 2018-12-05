@@ -11,11 +11,10 @@ if(($login == "comptable") && ($passwd == "comptable")) {
     exit;
 }
 
-else if(($login == "visiteur") && ($passwd == "visiteur")) {
+if(($login == "visiteur") && ($passwd == "visiteur")) {
     $_SESSION["is_loged"] = "true";
     header("location: main_menu_visiteur.php");
     exit;
 }
-
-header("location: index.php")
+header("location: index.php?error=1");
 ?>
