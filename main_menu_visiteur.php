@@ -18,7 +18,7 @@ if(!isset($_SESSION["is_loged"]) || $_SESSION["is_loged"] != "true") {
 <body>
 <div class="container">
 	
-	<h1>Bienvenue sur le site de notre entreprise !</h1>
+	<h1>Bienvenue sur l'espace visiteur !</h1>
 	<br><br>
 	<a href="menu.php"><button type="button" class="btn btn-primary btn-lg btn-block">Accès au menu</button></a>
 	

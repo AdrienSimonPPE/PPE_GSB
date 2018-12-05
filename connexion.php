@@ -5,10 +5,17 @@ session_start();
 $login = (isset($_POST["login"]))? $_POST["login"] : "";
 $passwd = (isset($_POST["passwd"]))? $_POST["passwd"] : "";
 
-if(($login == "admin") && ($passwd == "admin")) {
+if(($login == "comptable") && ($passwd == "comptable")) {
     $_SESSION["is_loged"] = "true";
-    header("location: main_menu.php");
+    header("location: main_menu_comptable.php");
     exit;
 }
+
+else if(($login == "visiteur") && ($passwd == "visiteur")) {
+    $_SESSION["is_loged"] = "true";
+    header("location: main_menu_visiteur.php");
+    exit;
+}
+
 header("location: index.php")
 ?>
