@@ -16,20 +16,31 @@ $error = (isset($_GET['error'])) ? $_GET['error'] : '' ;
 	<h1>Page de connexion</h1>
 	<br><br>
 	
-	<?php 
-	
-	if($error !=''){
+	<?php
+	if($error != ''){
 	    echo "error passwd !";
 	}
 	?>
 	
 	<form class="form-horizontal" method="post" action="connexion.php">
-  <div class="form-group">
+	
+	<div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Type de compte</label>
+    	<div class="col-sm-10">
+      		<select class="form-control" name="type">
+              <option value="v">Visiteur</option>
+              <option value="c">Comptable</option>
+            </select>
+    	</div>
+  	</div>
+	
+	
+  	<div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Login</label>
     	<div class="col-sm-10">
       		<input type="text" class="form-control" name="login" placeholder="Entrez votre identifiant">
     	</div>
-  </div>
+  	</div>
   
   <div class="form-group">
     <label for="inputPassword3" class="col-sm-2 control-label">Mot de passe</label>

@@ -1,7 +1,7 @@
 <?php 
 
 session_start();
-if(!isset($_SESSION["is_loged"]) || $_SESSION["is_loged"] != "true") {
+if(!isset($_SESSION["is_loged"]) || $_SESSION["is_comptable"] != "true") {
     header("location: deconnexion.php");
 }
 ?>
@@ -18,7 +18,8 @@ if(!isset($_SESSION["is_loged"]) || $_SESSION["is_loged"] != "true") {
 <body>
 <div class="container">
 	
-	<h1>Bienvenue sur l'espace comptable !</h1>
+	<h1>Bienvenue <?php echo ($_SESSION["usr_nom"]. " ".$_SESSION["usr_prenom"]); ?> sur votre espace comptable !</h1>
+	
 	<br><br>
 	<a href="menu.php"><button type="button" class="btn btn-primary btn-lg btn-block">Accès au menu</button></a>
 	

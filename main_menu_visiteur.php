@@ -1,7 +1,6 @@
 <?php 
-
 session_start();
-if(!isset($_SESSION["is_loged"]) || $_SESSION["is_loged"] != "true") {
+if(!isset($_SESSION["is_loged"]) || $_SESSION["is_visiteur"] != "true") {
     header("location: deconnexion.php");
 }
 ?>
@@ -18,9 +17,12 @@ if(!isset($_SESSION["is_loged"]) || $_SESSION["is_loged"] != "true") {
 <body>
 <div class="container">
 	
-	<h1>Bienvenue sur l'espace visiteur !</h1>
+	<h1>Bienvenue <?php echo ($_SESSION["usr_nom"]. " ".$_SESSION["usr_prenom"]); ?> sur votre espace comptable !</h1>
 	<br><br>
-	<a href="menu.php"><button type="button" class="btn btn-primary btn-lg btn-block">Accès au menu</button></a>
+	<a href="fichesFrais.php"><button type="button" class="btn btn-primary btn-lg btn-block">Saisie fiche de frais</button></a>
+	
+	<br><br>
+	<a href="#"><button type="button" class="btn btn-primary btn-lg btn-block">Mes fiches de frais</button></a>
 	
 	<br><br>
 	<a href="deconnexion.php"><button type="button" class="btn btn-danger btn-lg btn-block">Déconnexion</button></a>
