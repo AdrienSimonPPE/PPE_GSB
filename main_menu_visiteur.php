@@ -17,7 +17,7 @@ if(!isset($_SESSION["is_loged"]) || $_SESSION["is_visiteur"] != "true") {
 <body>
 <div class="container">
 	
-	<h1>Bienvenue <?php echo ($_SESSION["usr_nom"]. " ".$_SESSION["usr_prenom"]); ?> sur votre espace comptable !</h1>
+	<h1>Bienvenue <?php echo ($_SESSION["usr_nom"]. " ".$_SESSION["usr_prenom"]); ?> sur votre espace visiteur !</h1>
 	<br><br>
 	<a href="fichesFrais.php"><button type="button" class="btn btn-primary btn-lg btn-block">Saisie fiche de frais</button></a>
 	

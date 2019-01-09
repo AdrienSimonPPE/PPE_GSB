@@ -16,12 +16,6 @@ $error = (isset($_GET['error'])) ? $_GET['error'] : '' ;
 	<h1>Page de connexion</h1>
 	<br><br>
 	
-	<?php
-	if($error != ''){
-	    echo "error passwd !";
-	}
-	?>
-	
 	<form class="form-horizontal" method="post" action="connexion.php">
 	
 	<div class="form-group">
@@ -48,12 +42,19 @@ $error = (isset($_GET['error'])) ? $_GET['error'] : '' ;
       		<input type="password" class="form-control" name="passwd" placeholder="Entrez votre mot de passe">
     	</div>
   </div>
+    
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
 		<button type="submit" class="btn btn-default">Connexion</button>
     </div>
   </div>
 	</form>
+	
+	<?php
+	   if($error != ''){
+	       echo "Mot de passe ou nom d'utilisateur incorrect !";
+	   }
+    ?>
 
 </div>
 

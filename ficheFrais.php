@@ -1,3 +1,12 @@
+<?php 
+
+session_start();
+$bdd = new PDO("mysql:host=localhost;dbname=gsb_valide" , "root", "");
+
+$id = $_SESSION["usr_id"];
+echo $id;
+?>
+
 <!DOCTYPE HTML>
 <html>
 
@@ -64,15 +73,6 @@
 </div>
 </body>
 </html>
-
-<?php 
-
-session_start();
-$bdd = new PDO("mysql:host=localhost;dbname=gsb_valide" , "root", "");
-
-$id = $_SESSION["usr_id"];
-echo $id;
-?>
 
 
 
